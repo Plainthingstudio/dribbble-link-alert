@@ -8,8 +8,8 @@ if (window.location.hostname === 'dribbble.com' &&
   
   let alertElement = null;
   
-  // URL detection regex
-  const urlRegex = /https?:\/\/[^\s]+/gi;
+  // URL detection regex - detects http/https URLs, www domains, and common TLDs
+  const urlRegex = /(?:https?:\/\/[^\s]+|www\.[^\s]+|[a-zA-Z0-9-]+\.(?:com|org|net|edu|gov|io|co\.uk|co|me|ly|tv|fm|am|to|cc|biz|info|app|dev|tech|ai|xyz)[^\s]*)/gi;
   
   // Create warning popup
   function createWarningPopup() {
