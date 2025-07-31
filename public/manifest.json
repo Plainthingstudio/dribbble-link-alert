@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Dribbble Link Alert",
+  "version": "1.0.0",
+  "description": "Chrome extension built with React",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Dribbble Link Alert"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
